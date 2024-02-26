@@ -1,0 +1,33 @@
+﻿@model List<CurrencyVM>
+@{
+    int count = 1;
+}
+<a type="button" class="btn btn-primary mb-3 col-lg-2" asp-controller="Currency" asp-action="Create">Yeni Döviz Kodu Ekle</a>
+
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Döviz Adı</th>
+            <th scope="col">Döviz HTML Kodu</th>
+            <th scope="col"></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var currency in Model)
+        {
+            <tr>
+                <th scope="row">@count</th>
+                <td>@currency.Name</td>
+                <td>@currency.AttributeName</td>
+                <td class="text-center align-middle">
+                    <a type="button" class="btn btn-warning btn-sm col-lg-3" asp-controller="Currency" asp-action="Update" asp-route-id="@currency.Id">Düzenle</a>
+                    <a type="button" class="btn btn-danger btn-sm col-lg-3" asp-controller="Currency" asp-action="Delete" asp-route-id="@currency.Id">Sil</a>
+                </td>
+            </tr>
+            count++;
+        }
+
+    </tbody>
+</table>

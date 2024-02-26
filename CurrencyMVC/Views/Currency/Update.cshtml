@@ -1,0 +1,15 @@
+﻿@model UpdateCurrencyDto
+
+<form asp-controller="Currency" asp-action="Update" class="offset-3 col-lg-6">
+    <input type="hidden" />
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Döviz Adı</label>
+        <input asp-for="Name" type="text" class="form-control" placeholder="Döviz Adı" value="@Model.Name">
+    </div>
+    <div class="mb-3">
+        <label asp-for="AttributeName" class="form-label">Döviz HTML Kodu</label>
+        <input asp-for="AttributeName" type="text" class="form-control" placeholder="Döviz HTML Kodu" value="@Model.AttributeName">
+        <div id="emailHelp" class="form-text">Verilerin çekildiği <a href="https://www.doviz.com/">internet sayfasının</a>, istenen döviz kuru için belirlediği HTML kodunu girmeniz gerekmektedir.</div>
+    </div>
+    <button type="submit" class="btn btn-warning col-lg-2">Güncelle</button>
+</form>
