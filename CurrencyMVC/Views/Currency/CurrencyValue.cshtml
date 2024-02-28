@@ -12,9 +12,38 @@
         {
             <tr>
                 <td>@currencyDetail.CurrencyName</td>
-                <td>@currencyDetail.Value</td>
+                <td id="@currencyDetail.CurrencyName">@currencyDetail.Value</td>
             </tr>
         }
 
     </tbody>
 </table>
+
+
+@section Scripts
+{
+    <script type="text/javascript">
+        $(document).ready(() => {
+
+            var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:44383/currencyhub").build();
+            
+            connection.start().then(() => {
+                connection.invoke("SendCurrentCurrencyValue");
+            }).catch((err) => { console.log(err) });
+
+
+            connection.on("CurrentCurrencyValue", (currencies) => {
+
+                currencies.forEach(currency => {
+                    console.log("Currency Name = " + currency.currencyName)
+                    var currencyTag = document.getElementById(currency.currencyName);
+                    console.log(currencyTag)
+                    currencyTag.innerText = currency.value;
+                });
+            })
+        })
+    </script>
+
+}
+
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
