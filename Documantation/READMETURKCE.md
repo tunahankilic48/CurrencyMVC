@@ -1,6 +1,6 @@
 # Currency MVC
 
-Bu MVC projesi, [CurrencyWebAPI](https://github.com/tunahankilic48/CurrencyWebAPI) projesinden gelen verileri görselleştirmeyi amaçlamaktadır. Bunun için bir MVC projesi oluşturulmuş, veriler API'dan çekilmiş ve basit bir şekilde listelenmiştir.
+Bu MVC projesi, [CurrencyWebAPI](https://github.com/tunahankilic48/CurrencyWebAPI) projesinden gelen verileri gÃ¶rselleÅŸtirmeyi amaÃ§lamaktadÄ±r. Bunun iÃ§in bir MVC projesi oluÅŸturulmuÅŸ, veriler API'dan Ã§ekilmiÅŸ ve basit bir ÅŸekilde listelenmiÅŸtir.
 
 ## Teknolojiler ve paketler
 
@@ -8,8 +8,8 @@ Bu MVC projesi, [CurrencyWebAPI](https://github.com/tunahankilic48/CurrencyWebAP
 - EntitiyFramework
 - SignalR
 
-## Başlarken
+## BaÅŸlarken
 
-Verilerin alınabilmesi için program [CurrencyWebAPI](https://github.com/tunahankilic48/CurrencyWebAPI) projesi ile birlikte çalıştırılmalıdır. Verilerin doğru endpointten alınabilmesi içinse [Currency Controller](https://github.com/tunahankilic48/CurrencyMVC/blob/master/CurrencyMVC/Controllers/CurrencyController.cs) içindeki ve currencyvalue [CurrencyValue.cshtml](https://github.com/tunahankilic48/CurrencyMVC/blob/master/CurrencyMVC/Views/Currency/CurrencyValue.cshtml) dosyası içinde bulunan 28. satırdaki url, Web API'nin URL'i ile değiştirilmelidir.
+Verilerin alÄ±nabilmesi iÃ§in program [CurrencyWebAPI](https://github.com/tunahankilic48/CurrencyWebAPI) projesi ile birlikte Ã§alÄ±ÅŸtÄ±rÄ±lmalÄ±dÄ±r. Verilerin doÄŸru endpointlerden alÄ±nabilmesi iÃ§inse [Currency Controller](https://github.com/tunahankilic48/CurrencyMVC/blob/master/CurrencyMVC/Controllers/CurrencyController.cs) iÃ§indeki URL'ler ve [CurrencyValue.cshtml](https://github.com/tunahankilic48/CurrencyMVC/blob/master/CurrencyMVC/Views/Currency/CurrencyValue.cshtml) dosyasÄ± iÃ§inde bulunan 28. satÄ±rdaki URL, Web API'nin URL'i ile deÄŸiÅŸtirilmelidir.
 
 # Currency MVC
